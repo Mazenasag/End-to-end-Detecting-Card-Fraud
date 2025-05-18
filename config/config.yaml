@@ -1,0 +1,5 @@
+data_ingestion:
+  data_source: "data/data.csv"
+  processed_data_dir: "data/processed_data"
+  train_file: "train.csv"
+  test_file: "test.csv"
