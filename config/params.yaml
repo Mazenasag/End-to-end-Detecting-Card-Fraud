@@ -1,1 +1,4 @@
-key: val
+preprocessing:
+  remove_duplicates: true
+  scaler_type: "StandardScaler"
+  sampling_method: "SMOTE"

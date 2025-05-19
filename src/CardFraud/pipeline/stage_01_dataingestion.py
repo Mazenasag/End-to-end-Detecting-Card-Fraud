@@ -18,11 +18,11 @@ class DataIngestionPipeline:
         data_ingestion.initiate_data_ingestion()
 
 
-# if __name__ == "__main__":
-#     try:
-#         logging.info(f">>>>>>>>>>Stage {STAGE_NAME} Started <<<<<<<<<<<")
-#         obj = DataIngestionPipeline()
-#         obj.main()
-#         logging.info(f">>>>>>>>>>Stage {STAGE_NAME} Completed <<<<<<<<<<<")
-#     except Exception as e:
-#         raise CustomException(e, sys)
+if __name__ == "__main__":
+    try:
+        logging.info(f">>>>>>>>>>Stage {STAGE_NAME} Started <<<<<<<<<<<")
+        obj = DataIngestionPipeline()
+        obj.main()
+        logging.info(f">>>>>>>>>>Stage {STAGE_NAME} Completed <<<<<<<<<<<")
+    except Exception as e:
+        raise CustomException(e, sys)
