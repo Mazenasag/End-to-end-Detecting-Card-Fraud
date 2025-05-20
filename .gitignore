@@ -3,10 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 data/
-research/
+01_data_ingestion_.ipynb/
 # C extensions
 *.so
-research/
+
 # Distribution / packaging
 .Python
 build/
