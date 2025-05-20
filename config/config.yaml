@@ -1,3 +1,6 @@
+artifactes:
+  artifactes_dir: "artifacts"
+
 data_ingestion:
   data_source: "data/data.csv"
   processed_data_dir: "data"
@@ -14,5 +17,4 @@ data_preprocessing:
 data_training:
   processed_train_path: "data/processed_data/preprocessed_train.csv"
   processed_test_path: "data/processed_data/preprocessed_test.csv"
-  model_dir: "models/"
-  model_pkl_file: models/model.pkl
+  model_pkl_file: artifacts/model.pkl

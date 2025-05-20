@@ -7,6 +7,8 @@ from imblearn.over_sampling import SMOTE
 from pathlib import Path
 from CardFraud.entity.config_entity import DataPreprocessingConfig
 import os
+import joblib
+
 
 
 
@@ -31,7 +33,8 @@ class Preprocessing:
     def remove_duplicate(self, data: pd.DataFrame):
         if self.config.remove_duplicates:
             initial_shape = data.shape
-            unique_data = data.drop_duplicates()
+            unique_data_T = data.drop("Time",axis=1)
+            unique_data = unique_data_T.drop_duplicates()
             logging.info(
                 f"Removed duplicates. Shape before: {initial_shape}, after: {data.shape}")
         return unique_data
@@ -90,6 +93,11 @@ class Preprocessing:
 
             X_test_scaled = pd.DataFrame(X_test_scaled, columns=X_test.columns)
             X_test_scaled["Class"] = y_test.values
+
+            
+            scaler_path = os.path.join(self.config.artifacts_data_dir, "scaler.pkl")
+            joblib.dump(self.scaler, scaler_path)
+            logging.info(f"Scaler saved to {scaler_path}")
             logging.info(f"Data  Scaled sucessfully")
 
             return X_train_scaled, X_test_scaled

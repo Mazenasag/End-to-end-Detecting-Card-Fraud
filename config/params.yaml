@@ -4,11 +4,11 @@ preprocessing:
   sampling_method: "SMOTE"
 
 training_params:
-  max_depth: [5]
-  min_samples_split: [10]
-  min_samples_leaf: [10]
+  max_depth: [10]
+  min_samples_split: [5]
+  min_samples_leaf: [5]
   max_features: ["sqrt"]
-  n_estimators: [30]
+  n_estimators: [50]
   learning_rate: [0.1] # Only for boosting models
 
 # training_params:

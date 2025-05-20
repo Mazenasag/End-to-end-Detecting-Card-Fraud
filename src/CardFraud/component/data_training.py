@@ -13,7 +13,7 @@ import sys
 import joblib
 from sklearn.model_selection import RandomizedSearchCV
 from CardFraud.config.configuration import DataTrainingConfig
-
+import os
 
 
 
@@ -182,7 +182,7 @@ class ModelTraining:
             best_model = trained_models[best_model_name]
             
             # Ensure the model directory exists
-            os.makedirs(self.config.model_dir, exist_ok=True)
+            os.makedirs(self.config.artifacts_data_dir, exist_ok=True)
             
             # Save the best model to the specified path
             joblib.dump(best_model, self.config.model_pkl_file)

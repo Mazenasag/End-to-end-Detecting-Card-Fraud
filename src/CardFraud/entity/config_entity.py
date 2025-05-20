@@ -13,6 +13,7 @@ class DataIngestionConfig:
 
 @dataclass(frozen=True)
 class DataPreprocessingConfig:
+    artifacts_data_dir: Path
     train_file_path: Path
     test_file_path: Path
     processed_data_dir: Path
@@ -26,7 +27,7 @@ class DataPreprocessingConfig:
 class DataTrainingConfig:
     processed_train_path: Path
     processed_test_path: Path
-    model_dir: Path
+    artifacts_data_dir: Path
     model_pkl_file: Path
     max_depth: List
     min_samples_split: List

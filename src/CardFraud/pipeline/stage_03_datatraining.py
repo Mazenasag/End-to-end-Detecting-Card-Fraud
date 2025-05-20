@@ -5,23 +5,24 @@ import sys
 from exception import CustomException
 
 STAGE_NAME = "Data Training  Stage"
+
+
 class DataTrainigPipeline:
-    
+
     def __init__(self):
         pass
-    
-    def main():
+
+    def main(self):
 
         try:
-            data_config=ConfigurationManager()
-            data_train_config=data_config.get_data_training_config()
-            data_training=ModelTraining(data_train_config)
+            data_config = ConfigurationManager()
+            data_train_config = data_config.get_data_training_config()
+            data_training = ModelTraining(data_train_config)
             data_training.run_training_pipeline()
-            
+
         except Exception as e:
-            raise CustomException(e,sys)
-        
-        
+            raise CustomException(e, sys)
+
 
 if __name__ == "__main__":
     try:

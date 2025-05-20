@@ -26,6 +26,7 @@ class ConfigurationManager:
 
     def get_data_Prepropcssing_config(self) -> DataPreprocessingConfig:
         data_preprocessing_config = DataPreprocessingConfig(
+            artifacts_data_dir=self.config.artifactes.artifactes_dir,
             train_file_path=self.config.data_preprocessing.train_file_path,
             test_file_path=self.config.data_preprocessing.test_file_path,
             processed_data_dir=self.config.data_preprocessing.processed_data_dir,
@@ -41,7 +42,7 @@ class ConfigurationManager:
         data_training_config = DataTrainingConfig(
             processed_train_path=self.config.data_training.processed_train_path,
             processed_test_path=self.config.data_training.processed_test_path,
-            model_dir=self.config.data_training.model_dir,
+            artifacts_data_dir=self.config.artifactes.artifactes_dir,
             model_pkl_file=self.config.data_training.model_pkl_file,
             max_depth=self.params.training_params.max_depth,
             min_samples_split=self.params.training_params.min_samples_split,
