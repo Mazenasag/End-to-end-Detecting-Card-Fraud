@@ -1,6 +1,6 @@
 from CardFraud.utils.common import read_yaml, create_directories
 from CardFraud.constant import *
-from CardFraud.entity.config_entity import DataIngestionConfig, DataPreprocessingConfig
+from CardFraud.entity.config_entity import DataIngestionConfig, DataPreprocessingConfig, DataTrainingConfig
 
 
 class ConfigurationManager:
@@ -36,3 +36,18 @@ class ConfigurationManager:
             sampling_method=self.params.preprocessing.sampling_method)
 
         return data_preprocessing_config
+
+    def get_data_training_config(self) -> DataTrainingConfig:
+        data_training_config = DataTrainingConfig(
+            processed_train_path=self.config.data_training.processed_train_path,
+            processed_test_path=self.config.data_training.processed_test_path,
+            model_dir=self.config.data_training.model_dir,
+            model_pkl_file=self.config.data_training.model_pkl_file,
+            max_depth=self.params.training_params.max_depth,
+            min_samples_split=self.params.training_params.min_samples_split,
+            min_samples_leaf=self.params.training_params.min_samples_leaf,
+            max_features=self.params.training_params.max_features,
+            n_estimators=self.params.training_params.n_estimators,
+            learning_rate=self.params.training_params.learning_rate
+        )
+        return data_training_config

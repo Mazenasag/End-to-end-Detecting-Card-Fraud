@@ -5,7 +5,7 @@ import sys
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from imblearn.over_sampling import SMOTE
 from pathlib import Path
-from CardFraud.config.configuration import DataPreprocessingConfig
+from CardFraud.entity.config_entity import DataPreprocessingConfig
 import os
 
 

@@ -1,5 +1,4 @@
 from CardFraud.entity.config_entity import DataIngestionConfig
-from CardFraud.config.configuration import ConfigurationManager
 from sklearn.model_selection import train_test_split
 import pandas as pd
 from exception import CustomException

@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
+from typing import List
 
 
 @dataclass(frozen=True)
@@ -20,3 +21,16 @@ class DataPreprocessingConfig:
     remove_duplicates: bool
     scaler_type: str
     sampling_method: str
+
+@dataclass(frozen=True)
+class DataTrainingConfig:
+    processed_train_path: Path
+    processed_test_path: Path
+    model_dir: Path
+    model_pkl_file: Path
+    max_depth: List
+    min_samples_split: List
+    min_samples_leaf: List
+    max_features: List
+    n_estimators: List
+    learning_rate: List
