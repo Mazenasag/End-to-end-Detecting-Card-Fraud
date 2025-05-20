@@ -2,3 +2,19 @@ preprocessing:
   remove_duplicates: true
   scaler_type: "StandardScaler"
   sampling_method: "SMOTE"
+
+training_params:
+  max_depth: [5]
+  min_samples_split: [10]
+  min_samples_leaf: [10]
+  max_features: ["sqrt"]
+  n_estimators: [30]
+  learning_rate: [0.1] # Only for boosting models
+
+# training_params:
+#   max_depth: [5, 10]
+#   min_samples_split: [2, 5]
+#   min_samples_leaf: [1, 2]
+#   max_features: ["sqrt"]
+#   n_estimators: [100]
+#   learning_rate: [0.05, 0.1] # Only for boosting models

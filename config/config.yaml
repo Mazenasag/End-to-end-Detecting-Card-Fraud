@@ -10,3 +10,9 @@ data_preprocessing:
   processed_data_dir: "data/processed_data"
   processed_train_file: "preprocessed_train.csv"
   processed_test_file: "preprocessed_test.csv"
+
+data_training:
+  processed_train_path: "data/processed_data/preprocessed_train.csv"
+  processed_test_path: "data/processed_data/preprocessed_test.csv"
+  model_dir: "models/"
+  model_pkl_file: models/model.pkl
