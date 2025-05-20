@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Fraud Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Card Fraud Detection</h1>
+        <p>Please enter 29 values for the following variables:</p>
+        <p class="vars">V1 to V28, Amount</p>
+
+        <form method="POST" action="/predict">
+            <label for="input_data">Input (comma-separated):</label>
+            <textarea name="input_data" id="input_data" placeholder="-16.52, 8.58, -18.64, ..." required></textarea>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction_text %}
+    <div class="result {{ 'fraud' if 'Fraud' in prediction_text else 'not-fraud' }}">
+        <h2>{{ prediction_text }}</h2>
+    </div>
+        {% endif %}
+    </div>
+</body>
+</html>
