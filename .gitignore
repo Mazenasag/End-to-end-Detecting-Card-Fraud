@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 data/
-01_data_ingestion_.ipynb/
+research/
 # C extensions
 *.so
 
@@ -173,3 +173,4 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+"research/" 
