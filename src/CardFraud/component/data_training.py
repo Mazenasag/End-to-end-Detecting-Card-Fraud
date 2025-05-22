@@ -148,7 +148,6 @@ class ModelTraining:
                 precision = precision_score(y_test, y_pred, zero_division=1)
                 recall = recall_score(y_test, y_pred, zero_division=1)
                 f1 = f1_score(y_test, y_pred, zero_division=1)
-
                 metrics_list.append({
                     "Model": model_name,
                     "Accuracy": accuracy,
