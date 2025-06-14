@@ -7,7 +7,7 @@
 </div>
 
 ## **🔍 Overview**
-
+ 
 This project presents a **robust, end-to-end machine learning pipeline** for detecting fraudulent transactions using classification models such as **Logistic Regression**, **Random Forest**, **Decision Tree**, and **XGBoost**.
 
 It follows modern MLOps practices by integrating:
